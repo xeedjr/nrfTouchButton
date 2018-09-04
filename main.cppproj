@@ -51,66 +51,57 @@
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
   <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
   <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-  <avrgcc.compiler.symbols.DefSymbols>
-    <ListValues>
-      <Value>F_CPU=16000</Value>
-    </ListValues>
-  </avrgcc.compiler.symbols.DefSymbols>
-  <avrgcc.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
-      <Value>..</Value>
-      <Value>../os_user</Value>
-      <Value>../os/os/license</Value>
-      <Value>../os/os/lib/include</Value>
-      <Value>../os/os/common/oslib/include</Value>
-      <Value>../os/os/common/ports/AVR</Value>
-      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
-      <Value>../os/os/rt/include</Value>
-      <Value>../os/os/hal/osal/rt</Value>
-      <Value>../os/os/hal/include</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
-      <Value>../os/os/common/abstractions/cmsis_os</Value>
-    </ListValues>
-  </avrgcc.compiler.directories.IncludePaths>
-  <avrgcccpp.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
-      <Value>..</Value>
-      <Value>../os_user</Value>
-      <Value>../os/os/license</Value>
-      <Value>../os/os/lib/include</Value>
-      <Value>../os/os/common/abstractions/cmsis_os</Value>
-      <Value>../os/os/common/oslib/include</Value>
-      <Value>../os/os/common/ports/AVR</Value>
-      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
-      <Value>../os/os/rt/include</Value>
-      <Value>../os/os/hal/osal/rt</Value>
-      <Value>../os/os/hal/include</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
-    </ListValues>
-  </avrgcccpp.compiler.directories.IncludePaths>
-  <avrgcccpp.assembler.general.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
-    </ListValues>
-  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcc.compiler.directories.IncludePaths><ListValues>
+  <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+  <Value>..</Value>
+  <Value>../os_user</Value>
+  <Value>../os/os/license</Value>
+  <Value>../os/os/lib/include</Value>
+  <Value>../os/os/common/oslib/include</Value>
+  <Value>../os/os/common/ports/AVR</Value>
+  <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+  <Value>../os/os/rt/include</Value>
+  <Value>../os/os/hal/osal/rt</Value>
+  <Value>../os/os/hal/include</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+  <Value>../RF24</Value>
+  <Value>../os/os/common/abstractions/cmsis_os</Value>
+</ListValues></avrgcc.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.directories.IncludePaths><ListValues>
+  <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+  <Value>..</Value>
+  <Value>../os_user</Value>
+  <Value>../os/os/license</Value>
+  <Value>../os/os/lib/include</Value>
+  <Value>../os/os/common/oslib/include</Value>
+  <Value>../os/os/common/ports/AVR</Value>
+  <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+  <Value>../os/os/rt/include</Value>
+  <Value>../os/os/hal/osal/rt</Value>
+  <Value>../os/os/hal/include</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+  <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+  <Value>../RF24</Value>
+  <Value>../os/os/common/abstractions/cmsis_os</Value>
+</ListValues></avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.assembler.general.IncludePaths><ListValues><Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value></ListValues></avrgcccpp.assembler.general.IncludePaths>
+  <avrgcc.compiler.symbols.DefSymbols><ListValues><Value>F_CPU=16000</Value></ListValues></avrgcc.compiler.symbols.DefSymbols>
 </AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
@@ -123,44 +114,15 @@
   <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
   <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
   <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-  <avrgcc.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
-      <Value>../os_user</Value>
-      <Value>..</Value>
-      <Value>../os/os/license</Value>
-      <Value>../os/os/lib/include</Value>
-      <Value>../os/os/common/oslib/include</Value>
-      <Value>../os/os/common/ports/AVR</Value>
-      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
-      <Value>../os/os/rt/include</Value>
-      <Value>../os/os/hal/osal/rt</Value>
-      <Value>../os/os/hal/include</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
-      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
-    </ListValues>
-  </avrgcc.compiler.directories.IncludePaths>
-  <avrgcccpp.compiler.directories.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
-    </ListValues>
-  </avrgcccpp.compiler.directories.IncludePaths>
-  <avrgcccpp.assembler.general.IncludePaths>
-    <ListValues>
-      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
-    </ListValues>
-  </avrgcccpp.assembler.general.IncludePaths>
+  <avrgcc.compiler.directories.IncludePaths><ListValues><Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value><Value>..</Value><Value>../os_user</Value><Value>../os/os/license</Value><Value>../os/os/lib/include</Value><Value>../os/os/common/oslib/include</Value><Value>../os/os/common/ports/AVR</Value><Value>../os/os/common/ports/AVR/compilers/GCC</Value><Value>../os/os/rt/include</Value><Value>../os/os/hal/osal/rt</Value><Value>../os/os/hal/include</Value><Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value><Value>../RF24</Value></ListValues></avrgcc.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.directories.IncludePaths><ListValues><Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value><Value>..</Value><Value>../os_user</Value><Value>../os/os/license</Value><Value>../os/os/lib/include</Value><Value>../os/os/common/oslib/include</Value><Value>../os/os/common/ports/AVR</Value><Value>../os/os/common/ports/AVR/compilers/GCC</Value><Value>../os/os/rt/include</Value><Value>../os/os/hal/osal/rt</Value><Value>../os/os/hal/include</Value><Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value><Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value><Value>../RF24</Value></ListValues></avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.assembler.general.IncludePaths><ListValues><Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value></ListValues></avrgcccpp.assembler.general.IncludePaths>
 </AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Folder Include="src" />
     <Folder Include="os_" />
     <Folder Include="os_user" />
     <Folder Include="os_\hal" />
@@ -170,11 +132,9 @@
     <Folder Include="os_\oslib" />
     <Folder Include="os_\rt_port" />
     <Folder Include="os_\rt" />
+    <Folder Include="src\RF24" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="main.cpp">
-      <SubType>compile</SubType>
-    </Compile>
     <Compile Include="os\os\common\abstractions\cmsis_os\cmsis_os.c">
       <SubType>compile</SubType>
       <Link>os_\cmsis\cmsis_os.c</Link>
@@ -500,6 +460,57 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="os_user\mcuconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="RF24\nRF24L01.h">
+      <SubType>compile</SubType>
+      <Link>src\RF24\nRF24L01.h</Link>
+    </Compile>
+    <Compile Include="RF24\RF24.cpp">
+      <SubType>compile</SubType>
+      <Link>src\RF24\RF24.cpp</Link>
+    </Compile>
+    <Compile Include="RF24\RF24.h">
+      <SubType>compile</SubType>
+      <Link>src\RF24\RF24.h</Link>
+    </Compile>
+    <Compile Include="RF24\RF24HALChibios.cpp">
+      <SubType>compile</SubType>
+      <Link>src\RF24\RF24HALChibios.cpp</Link>
+    </Compile>
+    <Compile Include="RF24\RF24HALChibios.h">
+      <SubType>compile</SubType>
+      <Link>src\RF24\RF24HALChibios.h</Link>
+    </Compile>
+    <Compile Include="RF24\RF24_config.h">
+      <SubType>compile</SubType>
+      <Link>src\RF24\RF24_config.h</Link>
+    </Compile>
+    <Compile Include="src\BL_Main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\BL_Main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\power_management.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\power_manegement.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\rev_ver.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Rf.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\Rf.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

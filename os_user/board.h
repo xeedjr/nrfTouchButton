@@ -25,7 +25,7 @@
  * Board identifier.
  */
 #define BOARD_SYNERGIJA_AVR_MT_128
-#define BOARD_NAME "Synergija_AVR_MT_128"
+#define BOARD_NAME "nrfTouchButton"
 
 /*       PA7 RLY  DS  B5  B4  B3  B2  B1
  *        IN OUT  IN  IN  IN  IN  IN  IN

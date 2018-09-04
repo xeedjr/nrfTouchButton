@@ -1,3 +1,6 @@
 [submodule "os"]
 	path = os
 	url = https://github.com/ChibiOS/ChibiOS.git
+[submodule "RF24"]
+	path = RF24
+	url = https://github.com/xeedjr/RF24.git
