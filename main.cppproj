@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.Atmel.AVRGCC8.CPP</ToolchainName>
+    <ProjectGuid>dce6c7e3-ee26-4d79-826b-08594b9ad897</ProjectGuid>
+    <avrdevice>ATmega328</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>CPP</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>main</AssemblyName>
+    <Name>main</Name>
+    <RootNamespace>main</RootNamespace>
+    <ToolchainFlavour>Native</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.35.1" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+    <avrtool />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>F_CPU=16000</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+      <Value>..</Value>
+      <Value>../os_user</Value>
+      <Value>../os/os/license</Value>
+      <Value>../os/os/lib/include</Value>
+      <Value>../os/os/common/oslib/include</Value>
+      <Value>../os/os/common/ports/AVR</Value>
+      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+      <Value>../os/os/rt/include</Value>
+      <Value>../os/os/hal/osal/rt</Value>
+      <Value>../os/os/hal/include</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+      <Value>../os/os/common/abstractions/cmsis_os</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+      <Value>..</Value>
+      <Value>../os_user</Value>
+      <Value>../os/os/license</Value>
+      <Value>../os/os/lib/include</Value>
+      <Value>../os/os/common/abstractions/cmsis_os</Value>
+      <Value>../os/os/common/oslib/include</Value>
+      <Value>../os/os/common/ports/AVR</Value>
+      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+      <Value>../os/os/rt/include</Value>
+      <Value>../os/os/hal/osal/rt</Value>
+      <Value>../os/os/hal/include</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328 -B "%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\gcc\dev\atmega328"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+      <Value>../os_user</Value>
+      <Value>..</Value>
+      <Value>../os/os/license</Value>
+      <Value>../os/os/lib/include</Value>
+      <Value>../os/os/common/oslib/include</Value>
+      <Value>../os/os/common/ports/AVR</Value>
+      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+      <Value>../os/os/rt/include</Value>
+      <Value>../os/os/hal/osal/rt</Value>
+      <Value>../os/os/hal/include</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\atmel\ATmega_DFP\1.2.209\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+</AvrGccCpp>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="os_" />
+    <Folder Include="os_user" />
+    <Folder Include="os_\hal" />
+    <Folder Include="os_\hal_port" />
+    <Folder Include="os_\hal_osal" />
+    <Folder Include="os_\cmsis" />
+    <Folder Include="os_\oslib" />
+    <Folder Include="os_\rt_port" />
+    <Folder Include="os_\rt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="main.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os\os\common\abstractions\cmsis_os\cmsis_os.c">
+      <SubType>compile</SubType>
+      <Link>os_\cmsis\cmsis_os.c</Link>
+    </Compile>
+    <Compile Include="os\os\common\abstractions\cmsis_os\cmsis_os.h">
+      <SubType>compile</SubType>
+      <Link>os_\cmsis\cmsis_os.h</Link>
+    </Compile>
+    <Compile Include="os\os\common\oslib\src\chfactory.c">
+      <SubType>compile</SubType>
+      <Link>os_\oslib\chfactory.c</Link>
+    </Compile>
+    <Compile Include="os\os\common\oslib\src\chheap.c">
+      <SubType>compile</SubType>
+      <Link>os_\oslib\chheap.c</Link>
+    </Compile>
+    <Compile Include="os\os\common\oslib\src\chmboxes.c">
+      <SubType>compile</SubType>
+      <Link>os_\oslib\chmboxes.c</Link>
+    </Compile>
+    <Compile Include="os\os\common\oslib\src\chmemcore.c">
+      <SubType>compile</SubType>
+      <Link>os_\oslib\chmemcore.c</Link>
+    </Compile>
+    <Compile Include="os\os\common\oslib\src\chmempools.c">
+      <SubType>compile</SubType>
+      <Link>os_\oslib\chmempools.c</Link>
+    </Compile>
+    <Compile Include="os\os\common\ports\AVR\chcore.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt_port\chcore.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\osal\rt\osal.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_osal\osal.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\osal\rt\osal.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_osal\osal.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\ATMEGAxx\avr_pins.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\avr_pins.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\ATMEGAxx\avr_timers.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\avr_timers.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\ATMEGAxx\hal_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\ATMEGAxx\hal_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\ADCv1\hal_adc_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_adc_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\ADCv1\hal_adc_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_adc_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\EXTv1\hal_ext_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_ext_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\EXTv1\hal_ext_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_ext_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\GPIOv1\hal_pal_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_pal_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\GPIOv1\hal_pal_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_pal_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\I2Cv1\hal_i2c_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_i2c_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\I2Cv1\hal_i2c_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_i2c_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\SPIv1\hal_spi_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_spi_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\SPIv1\hal_spi_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_spi_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_gpt_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_gpt_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_gpt_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_gpt_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_icu_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_icu_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_icu_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_icu_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_pwm_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_pwm_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_pwm_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_pwm_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_st_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_st_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\TIMv1\hal_st_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_st_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\USARTv1\hal_serial_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_serial_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\USARTv1\hal_serial_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_serial_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\USBv1\hal_usb_lld.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_usb_lld.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\ports\AVR\MEGA\LLD\USBv1\hal_usb_lld.h">
+      <SubType>compile</SubType>
+      <Link>os_\hal_port\hal_usb_lld.h</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_adc.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_adc.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_buffers.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_buffers.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_can.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_can.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_crypto.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_crypto.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_dac.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_dac.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_ext.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_ext.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_gpt.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_gpt.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_i2c.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_i2c.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_i2s.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_i2s.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_icu.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_icu.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_mac.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_mac.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_mmcsd.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_mmcsd.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_mmc_spi.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_mmc_spi.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_pal.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_pal.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_pwm.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_pwm.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_qspi.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_qspi.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_queues.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_queues.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_rtc.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_rtc.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_sdc.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_sdc.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_serial.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_serial.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_serial_usb.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_serial_usb.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_spi.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_spi.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_st.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_st.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_uart.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_uart.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_usb.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_usb.c</Link>
+    </Compile>
+    <Compile Include="os\os\hal\src\hal_wdg.c">
+      <SubType>compile</SubType>
+      <Link>os_\hal\hal_wdg.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chcond.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chcond.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chdebug.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chdebug.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chdynamic.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chdynamic.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chevents.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chevents.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chmsg.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chmsg.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chmtx.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chmtx.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chregistry.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chregistry.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chschd.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chschd.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chsem.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chsem.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chstats.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chstats.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chsys.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chsys.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chthreads.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chthreads.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chtm.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chtm.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chtrace.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chtrace.c</Link>
+    </Compile>
+    <Compile Include="os\os\rt\src\chvt.c">
+      <SubType>compile</SubType>
+      <Link>os_\rt\chvt.c</Link>
+    </Compile>
+    <Compile Include="os_user\board.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os_user\board.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os_user\chconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os_user\halconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="os_user\mcuconf.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
