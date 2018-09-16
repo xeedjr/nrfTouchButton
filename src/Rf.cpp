@@ -5,9 +5,10 @@
  *  Author: Bogdan
  */ 
 #include "Rf.h"
+#include "RF24HALChibios.h"
 
 void Rf::init(){
-	radio_hal = new RF24HAL();
+	radio_hal = new RF24HAL_Chibios();
 	radio = new RF24(radio_hal);
 	
   radio->begin();                           // Setup and configure rf radio
