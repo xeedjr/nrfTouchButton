@@ -24,7 +24,7 @@
 /*
  * Board identifier.
  */
-#define BOARD_SYNERGIJA_AVR_MT_128
+#define BOARD_NRF_TOUCH_BUTTON
 #define BOARD_NAME "nrfTouchButton"
 
 /*       PA7 RLY  DS  B5  B4  B3  B2  B1
@@ -33,14 +33,14 @@
  *        PU VAL HiZ HiZ HiZ HiZ HiZ HiZ
  * PORTA   1   0   0   0   0   0   0   0
  */
-#define VAL_DDRA  0x00
-#define VAL_PORTA 0x00
+#define VAL_DDRA  0b00000000
+#define VAL_PORTA 0b00000000
 
 /*
  * All inputs with pullups.
  */
-#define VAL_DDRB  0x00
-#define VAL_PORTB 0x00
+#define VAL_DDRB  0b00101100
+#define VAL_PORTB 0b00000000
 
 /*        D7  D6  D5  D4 PC3   E R/W  RS
  *        OUT OUT OUT OUT IN OUT OUT OUT
@@ -48,8 +48,8 @@
  *        PU  PU  PU  PU  PU VAL VAL VAL
  * PORTC   0   0   0   0   1   0   0   0
  */
-#define VAL_DDRC  0x00
-#define VAL_PORTC 0x00
+#define VAL_DDRC  0b00000011
+#define VAL_PORTC 0b00000000
 
 /*       PD7 PD6 PD5 PD4 TXD RXD PD1 PD0
  *        IN  IN  IN  IN OUT  IN  IN  IN
@@ -57,8 +57,8 @@
  *        PU  PU  PU  PU VAL HiZ  PU  PU
  * PORTD   1   1   1   1   1   0   1   1
  */
-#define VAL_DDRD  0x00
-#define VAL_PORTD 0x00
+#define VAL_DDRD  0b00000000
+#define VAL_PORTD 0b00000000
 
 /*       PE7 PE6 BZ2 BZ2 PE3 PE2 PE1 PE0
  *        IN  IN OUT OUT  IN  IN OUT  IN
@@ -66,8 +66,8 @@
  *        PU  PU VAL VAL  PU  PU VAL  PU
  * PORTE   1   1   1   1   1   1   1   1
  */
-#define VAL_DDRE  0x00
-#define VAL_PORTE 0x00
+#define VAL_DDRE  0b00000000
+#define VAL_PORTE 0b00000000
 
 /*       TDI TDO TMS TCK PF3 PF2 PF1 PF0
  *         x   x   x   x  IN  IN  IN  IN
@@ -76,8 +76,8 @@
  * PORTF   0   0   0   0   1   1   1   1
  *
  */
-#define VAL_DDRF  0x00
-#define VAL_PORTF 0x00
+#define VAL_DDRF  0b00000000
+#define VAL_PORTF 0b00000000
 
 /*         x   x   x   x   x PG2 PG1 PG0
  *         x   x   x   x   x  IN  IN  IN
@@ -86,8 +86,8 @@
  * PORTG   0   0   0   0   0   1   1   1
  *
  */
-#define VAL_DDRG  0x00
-#define VAL_PORTG 0x00
+#define VAL_DDRG  0b00000000
+#define VAL_PORTG 0b00000000
 
 
 #define PORTA_BUTTON1           0
