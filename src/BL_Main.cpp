@@ -8,8 +8,10 @@
 #include "BL_Main.h"
 #include "Rf.h"
 #include "power_management.h"
+#include "NRF24Devices\SensorButtonDevice.h"
 
 extern Rf rf;
+extern nrf24dev::SensorButtonDevice nrfButtonDev;
 
 void BL_Main::init() {
 	thread_id = osThreadGetId();
@@ -30,10 +32,20 @@ void BL_Main::iteration() {
 	
 	switch(ev.value.signals) {
 	case kSwitchPush:
-		rf.send(1);
+		{
+			uint8_t buf[5];
+			uint8_t len = sizeof(buf);
+			nrfButtonDev.EncodeEvent(1, nrf24dev::SensorButtonDevice::kPressed, buf, &len);
+			rf.send_payload(buf, len);
+		};
 		break;
 	case kSwitchRelease:
-		rf.send(2);
+		{
+			uint8_t buf[5];
+			uint8_t len = sizeof(buf);
+			nrfButtonDev.EncodeEvent(1, nrf24dev::SensorButtonDevice::kReleased, buf, &len);
+			rf.send_payload(buf, len);
+		};
 		break;
 	}
 	

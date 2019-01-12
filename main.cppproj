@@ -82,6 +82,7 @@
   <avrgcc.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>F_CPU=16000</Value>
+      <Value>PORT_AVR_WFI_SLEEP_IDLE=TRUE</Value>
     </ListValues>
   </avrgcc.compiler.symbols.DefSymbols>
   <avrgcc.compiler.directories.IncludePaths>
@@ -111,13 +112,14 @@
       <Value>../src/devices_chibios_hal</Value>
     </ListValues>
   </avrgcc.compiler.directories.IncludePaths>
-  <avrgcc.compiler.optimization.level>Optimize more (-O2)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.level>Optimize most (-O3)</avrgcc.compiler.optimization.level>
   <avrgcc.compiler.optimization.PackStructureMembers>True</avrgcc.compiler.optimization.PackStructureMembers>
   <avrgcc.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcc.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcc.compiler.warnings.AllWarnings>True</avrgcc.compiler.warnings.AllWarnings>
   <avrgcccpp.compiler.symbols.DefSymbols>
     <ListValues>
       <Value>F_CPU=16000</Value>
+      <Value>PORT_AVR_WFI_SLEEP_IDLE=TRUE</Value>
     </ListValues>
   </avrgcccpp.compiler.symbols.DefSymbols>
   <avrgcccpp.compiler.directories.IncludePaths>
@@ -148,7 +150,7 @@
       <Value>../src/avr_std_lib</Value>
     </ListValues>
   </avrgcccpp.compiler.directories.IncludePaths>
-  <avrgcccpp.compiler.optimization.level>Optimize more (-O2)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.level>Optimize most (-O3)</avrgcccpp.compiler.optimization.level>
   <avrgcccpp.compiler.optimization.PackStructureMembers>True</avrgcccpp.compiler.optimization.PackStructureMembers>
   <avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>True</avrgcccpp.compiler.optimization.AllocateBytesNeededForEnum>
   <avrgcccpp.compiler.warnings.AllWarnings>True</avrgcccpp.compiler.warnings.AllWarnings>
@@ -169,93 +171,95 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <ToolchainSettings>
       <AvrGccCpp>
-        <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
-        <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
-        <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
-        <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
-        <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
-        <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
-        <avrgcc.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>F_CPU=16000</Value>
-          </ListValues>
-        </avrgcc.compiler.symbols.DefSymbols>
-        <avrgcc.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-            <Value>..</Value>
-            <Value>../os_user</Value>
-            <Value>../os/os/license</Value>
-            <Value>../os/os/lib/include</Value>
-            <Value>../os/os/common/oslib/include</Value>
-            <Value>../os/os/common/ports/AVR</Value>
-            <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
-            <Value>../os/os/rt/include</Value>
-            <Value>../os/os/hal/osal/rt</Value>
-            <Value>../os/os/hal/include</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
-            <Value>../RF24</Value>
-            <Value>../os/os/common/abstractions/cmsis_os</Value>
-            <Value>../src/devices_chibios_hal</Value>
-          </ListValues>
-        </avrgcc.compiler.directories.IncludePaths>
-        <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
-        <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.symbols.DefSymbols>
-          <ListValues>
-            <Value>F_CPU=16000</Value>
-          </ListValues>
-        </avrgcccpp.compiler.symbols.DefSymbols>
-        <avrgcccpp.compiler.directories.IncludePaths>
-          <ListValues>
-            <Value>..</Value>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-            <Value>../os_user</Value>
-            <Value>../os/os/license</Value>
-            <Value>../os/os/lib/include</Value>
-            <Value>../os/os/common/oslib/include</Value>
-            <Value>../os/os/common/ports/AVR</Value>
-            <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
-            <Value>../os/os/rt/include</Value>
-            <Value>../os/os/hal/osal/rt</Value>
-            <Value>../os/os/hal/include</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
-            <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
-            <Value>../RF24</Value>
-            <Value>../os/os/common/abstractions/cmsis_os</Value>
-            <Value>../src/devices_chibios_hal</Value>
-            <Value>../src/avr_std_lib</Value>
-          </ListValues>
-        </avrgcccpp.compiler.directories.IncludePaths>
-        <avrgcccpp.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcccpp.compiler.optimization.level>
-        <avrgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcccpp.compiler.optimization.DebugLevel>
-        <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
-        <avrgcccpp.linker.libraries.Libraries>
-          <ListValues>
-            <Value>libm</Value>
-          </ListValues>
-        </avrgcccpp.linker.libraries.Libraries>
-        <avrgcccpp.assembler.general.IncludePaths>
-          <ListValues>
-            <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
-          </ListValues>
-        </avrgcccpp.assembler.general.IncludePaths>
-      </AvrGccCpp>
+  <avrgcc.common.Device>-mmcu=atmega328p -B "%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\gcc\dev\atmega328p"</avrgcc.common.Device>
+  <avrgcc.common.outputfiles.hex>True</avrgcc.common.outputfiles.hex>
+  <avrgcc.common.outputfiles.lss>True</avrgcc.common.outputfiles.lss>
+  <avrgcc.common.outputfiles.eep>True</avrgcc.common.outputfiles.eep>
+  <avrgcc.common.outputfiles.srec>True</avrgcc.common.outputfiles.srec>
+  <avrgcc.common.outputfiles.usersignatures>False</avrgcc.common.outputfiles.usersignatures>
+  <avrgcc.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>F_CPU=16000</Value>
+      <Value>PORT_AVR_WFI_SLEEP_IDLE=TRUE</Value>
+    </ListValues>
+  </avrgcc.compiler.symbols.DefSymbols>
+  <avrgcc.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>..</Value>
+      <Value>../os_user</Value>
+      <Value>../os/os/license</Value>
+      <Value>../os/os/lib/include</Value>
+      <Value>../os/os/common/oslib/include</Value>
+      <Value>../os/os/common/ports/AVR</Value>
+      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+      <Value>../os/os/rt/include</Value>
+      <Value>../os/os/hal/osal/rt</Value>
+      <Value>../os/os/hal/include</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+      <Value>../RF24</Value>
+      <Value>../os/os/common/abstractions/cmsis_os</Value>
+      <Value>../src/devices_chibios_hal</Value>
+    </ListValues>
+  </avrgcc.compiler.directories.IncludePaths>
+  <avrgcc.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcc.compiler.optimization.level>
+  <avrgcc.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcc.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.symbols.DefSymbols>
+    <ListValues>
+      <Value>F_CPU=16000</Value>
+      <Value>PORT_AVR_WFI_SLEEP_IDLE=TRUE</Value>
+    </ListValues>
+  </avrgcccpp.compiler.symbols.DefSymbols>
+  <avrgcccpp.compiler.directories.IncludePaths>
+    <ListValues>
+      <Value>..</Value>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+      <Value>../os_user</Value>
+      <Value>../os/os/license</Value>
+      <Value>../os/os/lib/include</Value>
+      <Value>../os/os/common/oslib/include</Value>
+      <Value>../os/os/common/ports/AVR</Value>
+      <Value>../os/os/common/ports/AVR/compilers/GCC</Value>
+      <Value>../os/os/rt/include</Value>
+      <Value>../os/os/hal/osal/rt</Value>
+      <Value>../os/os/hal/include</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/ATMEGAxx</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/ADCv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/EXTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/GPIOv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/I2Cv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/SPIv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/TIMv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USARTv1</Value>
+      <Value>../os/os/hal/ports/AVR/MEGA/LLD/USBv1</Value>
+      <Value>../RF24</Value>
+      <Value>../os/os/common/abstractions/cmsis_os</Value>
+      <Value>../src/devices_chibios_hal</Value>
+      <Value>../src/avr_std_lib</Value>
+    </ListValues>
+  </avrgcccpp.compiler.directories.IncludePaths>
+  <avrgcccpp.compiler.optimization.level>Optimize debugging experience (-Og)</avrgcccpp.compiler.optimization.level>
+  <avrgcccpp.compiler.optimization.DebugLevel>Maximum (-g3)</avrgcccpp.compiler.optimization.DebugLevel>
+  <avrgcccpp.compiler.miscellaneous.OtherFlags>-std=c++11</avrgcccpp.compiler.miscellaneous.OtherFlags>
+  <avrgcccpp.linker.libraries.Libraries>
+    <ListValues>
+      <Value>libm</Value>
+    </ListValues>
+  </avrgcccpp.linker.libraries.Libraries>
+  <avrgcccpp.assembler.general.IncludePaths>
+    <ListValues>
+      <Value>%24(PackRepoDir)\Atmel\ATmega_DFP\1.2.272\include</Value>
+    </ListValues>
+  </avrgcccpp.assembler.general.IncludePaths>
+</AvrGccCpp>
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
@@ -271,6 +275,7 @@
     <Folder Include="os_\rt" />
     <Folder Include="src\devices_chibios_hal" />
     <Folder Include="src\avr_std_lib" />
+    <Folder Include="src\NRF24Devices" />
     <Folder Include="src\RF24" />
   </ItemGroup>
   <ItemGroup>
@@ -674,6 +679,12 @@
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\main.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\NRF24Devices\SensorButtonDevice.cpp">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="src\NRF24Devices\SensorButtonDevice.h">
       <SubType>compile</SubType>
     </Compile>
     <Compile Include="src\power_management.h">

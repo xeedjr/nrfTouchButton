@@ -6,6 +6,9 @@
  */ 
 #include "Rf.h"
 #include "RF24HALChibios.h"
+#include "NRF24Devices\SensorButtonDevice.h"
+
+extern nrf24dev::SensorButtonDevice nrfButtonDev;
 
 void Rf::init(){
 	radio_hal = new RF24HAL_Chibios();
@@ -20,53 +23,17 @@ void Rf::init(){
   radio->setCRCLength(RF24_CRC_8);          // Use 8-bit CRC for performance
   radio->setPayloadSize(1);
 
-      radio->openWritingPipe(addresses[1]);
-      radio->openReadingPipe(1,addresses[0]);
+      radio->openWritingPipe(nrfButtonDev.GetAddress());
+      //radio->openReadingPipe(1,addresses[0]);
 	  radio->stopListening();
 	radio->powerDown();
-
-    /* init hardware pins */
- //   nrf24_init();
-    
-    /* Channel #2 , payload length: 4 */
-  //  nrf24_config(2, 1);
-
-    /* Set the device addresses */
-  //  nrf24_tx_address(tx_address);
-  //  nrf24_rx_address(rx_address);
 }
 
-void Rf::send(uint8_t status) {
-	data_array[0] = status;
-volatile uint8_t temp;
+int Rf::send_payload(uint8_t* buf, uint8_t len) {
+	if (len > 32) 
+		return -1;
+		
 	radio->powerUp();
-
-	if(!radio->write(data_array, 1)){     //Write to the FIFO buffers
-		temp++;                      //Keep count of failed payloads
-	}
-
+	radio->write(buf, len);
 	radio->powerDown();
-/*
-        // Automatically goes to TX mode 
-        nrf24_send(data_array);
-        
-        // Wait for transmission to end 
-        while(nrf24_isSending());
-
-        // Make analysis on last tranmission attempt 
-        temp = nrf24_lastMessageStatus();
-
-        if(temp == NRF24_TRANSMISSON_OK)
-        {
-        }
-        else if(temp == NRF24_MESSAGE_LOST)
-        {
-        }
-        
-        // Retranmission count indicates the tranmission quality 
-        temp = nrf24_retransmissionCount();
-
-        // Optionally, go back to RX mode ... 
-        //nrf24_powerDown();      
-		*/
 }

@@ -19,7 +19,9 @@
 #include "BL_Main.h"
 #include "SensorButton.h"
 #include "power_management.h"
+#include "NRF24Devices/SensorButtonDevice.h"
 
+nrf24dev::SensorButtonDevice nrfButtonDev;
 SensorButton* button = nullptr;
 LEDBlinker led_blink;
 Rf rf;
@@ -49,6 +51,14 @@ static const EXTConfig extcfg = {
 };
 
 
+char buff[256];
+char* p;
+void myprintf(const char *__fmt, ...) {
+	va_list arg;
+	int len = snprintf(buff, 256, __fmt, arg);
+	p = buff;
+}
+
 int main( void )
 {
 	_delay_ms(500);
@@ -73,6 +83,7 @@ int main( void )
 								2,
 								[](){bl.SwitchPress();},
 								[](){bl.SwitchRelease();});
+	nrfButtonDev.init(1);
 	
 	//Rf
 	rf.init();
